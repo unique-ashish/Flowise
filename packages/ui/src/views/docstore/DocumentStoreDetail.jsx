@@ -517,7 +517,7 @@ const DocumentStoreDetails = () => {
                                     }}
                                 >
                                     <IconVectorBezier2 style={{ marginRight: 5 }} size={17} />
-                                    Chatflows Used:
+                                    Chatbots Used:
                                 </div>
                                 {getSpecificDocumentStore.data.whereUsed.map((chatflowUsed, index) => (
                                     <Chip

@@ -52,12 +52,12 @@ import useApi from '@/hooks/useApi'
 import { getErrorMessage } from '@/utils/errorHandler'
 import { useNavigate } from 'react-router-dom'
 
-const dataToExport = ['Chatflows', 'Agentflows', 'Tools', 'Variables', 'Assistants']
+const dataToExport = ['Chatbots', 'Agent Squad', 'Tools', 'Variables', 'Agents']
 
 const ExportDialog = ({ show, onCancel, onExport }) => {
     const portalElement = document.getElementById('portal')
 
-    const [selectedData, setSelectedData] = useState(['Chatflows', 'Agentflows', 'Tools', 'Variables', 'Assistants'])
+    const [selectedData, setSelectedData] = useState(['Chatbots', 'Agent Squad', 'Tools', 'Variables', 'Agents'])
     const [isExporting, setIsExporting] = useState(false)
 
     useEffect(() => {
@@ -243,11 +243,11 @@ const ProfileSection = ({ username, handleLogout }) => {
 
     const onExport = (data) => {
         const body = {}
-        if (data.includes('Chatflows')) body.chatflow = true
-        if (data.includes('Agentflows')) body.agentflow = true
+        if (data.includes('Chatbots')) body.chatflow = true
+        if (data.includes('Agent Squad')) body.agentflow = true
         if (data.includes('Tools')) body.tool = true
         if (data.includes('Variables')) body.variable = true
-        if (data.includes('Assistants')) body.assistant = true
+        if (data.includes('Agents')) body.assistant = true
 
         exportAllApi.request(body)
     }

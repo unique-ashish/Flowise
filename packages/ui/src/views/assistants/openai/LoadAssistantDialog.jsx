@@ -85,7 +85,7 @@ const LoadAssistantDialog = ({ show, dialogProps, onCancel, onAssistantSelected,
                     <Box sx={{ p: 2 }}>
                         <Stack sx={{ position: 'relative' }} direction='row'>
                             <Typography variant='overline'>
-                                Assistants
+                                Agents
                                 <span style={{ color: 'red' }}>&nbsp;*</span>
                             </Typography>
                         </Stack>

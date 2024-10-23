@@ -1,18 +1,28 @@
 // assets
 import {
-    IconUsersGroup,
-    IconHierarchy,
-    IconBuildingStore,
-    IconKey,
-    IconTool,
-    IconLock,
-    IconRobot,
-    IconVariable,
-    IconFiles
+    IconUsers,
+    IconGitBranch,
+    IconTemplate,
+    IconApiApp,
+    IconTools,
+    IconPlugConnected,
+    IconBrain,
+    IconBraces,
+    IconDatabase
 } from '@tabler/icons-react'
 
 // constant
-const icons = { IconUsersGroup, IconHierarchy, IconBuildingStore, IconKey, IconTool, IconLock, IconRobot, IconVariable, IconFiles }
+const icons = {
+    IconUsersGroup: IconUsers,
+    IconHierarchy: IconGitBranch,
+    IconBuildingStore: IconTemplate,
+    IconKey: IconApiApp,
+    IconTool: IconTools,
+    IconLock: IconPlugConnected,
+    IconRobot: IconBrain,
+    IconVariable: IconBraces,
+    IconFiles: IconDatabase
+}
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -23,7 +33,7 @@ const dashboard = {
     children: [
         {
             id: 'chatflows',
-            title: 'Chatflows',
+            title: 'Chatbots    ',
             type: 'item',
             url: '/chatflows',
             icon: icons.IconHierarchy,
@@ -31,16 +41,16 @@ const dashboard = {
         },
         {
             id: 'agentflows',
-            title: 'Agentflows',
+            title: 'Agent Squad',
             type: 'item',
             url: '/agentflows',
             icon: icons.IconUsersGroup,
             breadcrumbs: true,
-            isBeta: true
+            isBeta: false
         },
         {
             id: 'assistants',
-            title: 'Assistants',
+            title: 'Agents',
             type: 'item',
             url: '/assistants',
             icon: icons.IconRobot,
@@ -48,7 +58,7 @@ const dashboard = {
         },
         {
             id: 'marketplaces',
-            title: 'Marketplaces',
+            title: 'Templates',
             type: 'item',
             url: '/marketplaces',
             icon: icons.IconBuildingStore,
@@ -64,7 +74,7 @@ const dashboard = {
         },
         {
             id: 'credentials',
-            title: 'Credentials',
+            title: 'Integrations',
             type: 'item',
             url: '/credentials',
             icon: icons.IconLock,

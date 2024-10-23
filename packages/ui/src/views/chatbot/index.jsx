@@ -78,6 +78,16 @@ const ChatbotFull = () => {
             setChatflow(chatflowData)
 
             const chatflowType = chatflowData.type
+            const baseTheme = {
+                chatWindow: {
+                    footer: {
+                        text: 'Powered by',
+                        company: 'bibha ai',
+                        companyLink: 'https://bibha.ai'
+                    }
+                }
+            }
+
             if (chatflowData.chatbotConfig) {
                 let parsedConfig = {}
                 if (chatflowType === 'MULTIAGENT') {
@@ -86,9 +96,8 @@ const ChatbotFull = () => {
 
                 try {
                     parsedConfig = { ...parsedConfig, ...JSON.parse(chatflowData.chatbotConfig) }
-                    setChatbotTheme(parsedConfig)
+                    setChatbotTheme({ ...baseTheme, ...parsedConfig })
                     if (parsedConfig.overrideConfig) {
-                        // Generate new sessionId
                         if (parsedConfig.overrideConfig.generateNewSession) {
                             parsedConfig.overrideConfig.sessionId = Date.now().toString()
                         }
@@ -96,11 +105,16 @@ const ChatbotFull = () => {
                     }
                 } catch (e) {
                     console.error(e)
-                    setChatbotTheme(parsedConfig)
+                    setChatbotTheme(baseTheme)
                     setChatbotOverrideConfig({})
                 }
             } else if (chatflowType === 'MULTIAGENT') {
-                setChatbotTheme({ showAgentMessages: true })
+                setChatbotTheme({
+                    ...baseTheme,
+                    showAgentMessages: true
+                })
+            } else {
+                setChatbotTheme(baseTheme)
             }
         }
     }, [getSpecificChatflowFromPublicApi.data, getSpecificChatflowApi.data])
@@ -120,7 +134,7 @@ const ChatbotFull = () => {
                             chatflowid={chatflow.id}
                             apiHost={baseURL}
                             chatflowConfig={chatbotOverrideConfig}
-                            theme={{ chatWindow: chatbotTheme }}
+                            theme={chatbotTheme}
                         />
                     )}
                     <LoginDialog show={loginDialogOpen} dialogProps={loginDialogProps} onConfirm={onLoginClick} />

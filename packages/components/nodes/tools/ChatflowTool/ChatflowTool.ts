@@ -76,7 +76,7 @@ class ChatflowTool_Tools implements INode {
                 name: 'baseURL',
                 type: 'string',
                 description:
-                    'Base URL to Flowise. By default, it is the URL of the incoming request. Useful when you need to execute the Chatflow through an alternative route.',
+                    'Base URL to Bibha. By default, it is the URL of the incoming request. Useful when you need to execute the Chatflow through an alternative route.',
                 placeholder: 'http://localhost:3000',
                 optional: true,
                 additionalParams: true
@@ -86,7 +86,7 @@ class ChatflowTool_Tools implements INode {
                 name: 'startNewSession',
                 type: 'boolean',
                 description:
-                    'Whether to continue the session with the Chatflow tool or start a new one with each interaction. Useful for Chatflows with memory if you want to avoid it.',
+                    'Whether to continue the session with the Chatflow tool or start a new one with each interaction. Useful for Chatbots with memory if you want to avoid it.',
                 default: false,
                 optional: true,
                 additionalParams: true

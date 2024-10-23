@@ -1,7 +1,7 @@
 {
-    "name": "flowise-api",
-    "version": "1.0.2",
-    "description": "Flowise API documentation server",
+    "name": "bibha-api",
+    "version": "1.0.0",
+    "description": "Bibha API documentation server",
     "scripts": {
         "build": "tsc",
         "start": "node dist/index.js",

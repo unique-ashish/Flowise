@@ -136,7 +136,7 @@ const chatwindowConfig = (isReact = false) => {
     return isReact
         ? `chatWindow: {
                     showTitle: true,
-                    title: 'Flowise Bot',
+                    title: 'Bibha Bot',
                     titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                     showAgentMessages: true,
                     welcomeMessage: 'Hello! This is custom welcome message',
@@ -180,13 +180,13 @@ const chatwindowConfig = (isReact = false) => {
                     footer: {
                         textColor: '#303235',
                         text: 'Powered by',
-                        company: 'Flowise',
-                        companyLink: 'https://flowiseai.com',
+                        company: 'Bibha',
+                        companyLink: 'https://bibha.ai',
                     }
                 }`
         : `chatWindow: {
                 showTitle: true,
-                title: 'Flowise Bot',
+                title: 'Bibha Bot',
                 titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                 showAgentMessages: true,
                 welcomeMessage: 'Hello! This is custom welcome message',
@@ -230,8 +230,8 @@ const chatwindowConfig = (isReact = false) => {
                 footer: {
                     textColor: '#303235',
                     text: 'Powered by',
-                    company: 'Flowise',
-                    companyLink: 'https://flowiseai.com',
+                    company: 'Bibha',
+                    companyLink: 'https://bibha.ai',
                 }
             }`
 }
@@ -363,7 +363,7 @@ const EmbedChat = ({ chatflowid }) => {
                         <>
                             <span>
                                 Paste this anywhere in the <code>{`<body>`}</code> tag of your html file.
-                                <p>
+                                {/* <p>
                                     You can also specify a&nbsp;
                                     <a
                                         rel='noreferrer'
@@ -373,7 +373,7 @@ const EmbedChat = ({ chatflowid }) => {
                                         version
                                     </a>
                                     :&nbsp;<code>{`https://cdn.jsdelivr.net/npm/flowise-embed@<version>/dist/web.js`}</code>
-                                </p>
+                                </p> */}
                             </span>
                             <div style={{ height: 10 }}></div>
                         </>

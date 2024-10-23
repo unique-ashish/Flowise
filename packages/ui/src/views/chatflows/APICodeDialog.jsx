@@ -728,7 +728,7 @@ formData.append("openAIApiKey[openAIEmbeddings_0]", "sk-my-openai-2nd-key")`
                                         </div>
                                     </>
                                 )}
-                                {getIsChatflowStreamingApi.data?.isStreaming && (
+                                {/* {getIsChatflowStreamingApi.data?.isStreaming && (
                                     <p>
                                         Read&nbsp;
                                         <a rel='noreferrer' target='_blank' href='https://docs.flowiseai.com/using-flowise/streaming'>
@@ -736,7 +736,7 @@ formData.append("openAIApiKey[openAIEmbeddings_0]", "sk-my-openai-2nd-key")`
                                         </a>
                                         &nbsp;on how to stream response back to application
                                     </p>
-                                )}
+                                )} */}
                             </>
                         )}
                         {codeLang === 'Share Chatbot' && !chatflowApiKeyId && (

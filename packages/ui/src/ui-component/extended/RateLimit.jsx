@@ -7,7 +7,6 @@ import { Typography, Button, OutlinedInput, Stack } from '@mui/material'
 
 // Project import
 import { StyledButton } from '@/ui-component/button/StyledButton'
-import { TooltipWithParser } from '@/ui-component/tooltip/TooltipWithParser'
 import { SwitchInput } from '@/ui-component/switch/Switch'
 
 // Icons
@@ -148,12 +147,12 @@ const RateLimit = () => {
         <Stack direction='column' spacing={2} sx={{ alignItems: 'start' }}>
             <Typography variant='h3'>
                 Rate Limit{' '}
-                <TooltipWithParser
-                    style={{ marginLeft: 10 }}
+                {/* <TooltipWithParser
+                    style={{ mb: 1, mt: 2, marginLeft: 10 }}
                     title={
                         'Visit <a target="_blank" href="https://docs.flowiseai.com/rate-limit">Rate Limit Setup Guide</a> to set up Rate Limit correctly in your hosting environment.'
                     }
-                />
+                /> */}
             </Typography>
             <Stack direction='column' spacing={2} sx={{ width: '100%' }}>
                 <SwitchInput label='Enable Rate Limit' onChange={handleChange} value={rateLimitStatus} />

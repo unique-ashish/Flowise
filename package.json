@@ -1,11 +1,11 @@
 {
-    "name": "flowise",
-    "version": "2.2.2",
+    "name": "bibha",
+    "version": "2.1.2",
     "private": true,
-    "homepage": "https://flowiseai.com",
+    "homepage": "https://bibha.ai",
     "workspaces": [
         "packages/*",
-        "flowise",
+        "bibha",
         "ui",
         "components",
         "api-documentation"

@@ -419,11 +419,11 @@ const CanvasHeader = ({ chatflow, isAgentCanvas, handleSaveFlow, handleDeleteFlo
                                 ...theme.typography.mediumAvatar,
                                 transition: 'all .2s ease-in-out',
                                 background: theme.palette.canvasHeader.settingsLight,
-                                color: theme.palette.canvasHeader.settingsDark,
-                                '&:hover': {
-                                    background: theme.palette.canvasHeader.settingsDark,
-                                    color: theme.palette.canvasHeader.settingsLight
-                                }
+                                color: theme.palette.canvasHeader.settingsDark
+                                // '&:hover': {
+                                //     background: theme.palette.canvasHeader.settingsDark,
+                                //     color: theme.palette.canvasHeader.settingsLight
+                                // }
                             }}
                             onClick={() => setSettingsOpen(!isSettingsOpen)}
                         >
